@@ -1,0 +1,14 @@
+
+HelloJenkins.Testing/bin/
+
+HelloJenkins.Testing/obj/
+
+HelloJenkins.BL/obj/
+
+HelloJenkins.BL/bin/
+
+HelloJenkins/bin/
+
+HelloJenkins/obj/
+
+HelloJenkins/.vs/
