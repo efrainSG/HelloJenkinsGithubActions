@@ -18,24 +18,17 @@ namespace HelloJenkins.Testing
             
         }
 
-        [Test]
-        public void Test_Must_Pass()
+        [Test,
+            TestCase("Efra"),
+            TestCase("efra")]
+        public void Test_Must_Pass(string name)
         {
             controller = new HelloJenkinsController(businessLogic);
 
-            var response = controller.getHello("Efra");
+            var response = controller.getHello(name);
 
             Console.WriteLine(response);
-            Assert.AreEqual("Hello, Efra.", response);
-        }
-
-        [Test]
-        public void Test_Must_Fail()
-        {
-            controller = new HelloJenkinsController(businessLogic);
-
-            var response = controller.getHello("efra");
-            Assert.AreEqual("Hello, Efra!", response.ToString());
+            Assert.AreEqual($"Hello, {name}.", response);
         }
     }
 }
