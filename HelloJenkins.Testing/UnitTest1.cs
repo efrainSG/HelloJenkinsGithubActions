@@ -35,6 +35,7 @@ namespace HelloJenkins.Testing
             controller = new HelloJenkinsController(businessLogic);
 
             var response = controller.getHello("efra");
+
             Assert.AreEqual("Hello, Efra!", response.ToString());
         }
     }
