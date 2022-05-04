@@ -20,6 +20,6 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore ./HelloJenkins/HelloJenkins.sln
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build --no-restore ./HelloJenkins/HelloJenkins.sln
     - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet test --no-build --verbosity normal ./HelloJenkins/HelloJenkins.sln
