@@ -19,7 +19,7 @@ namespace HelloJenkins.Testing
         }
 
         [Test]
-        public void Test1()
+        public void Test_Must_Pass()
         {
             controller = new HelloJenkinsController(businessLogic);
 
@@ -27,6 +27,15 @@ namespace HelloJenkins.Testing
 
             Console.WriteLine(response);
             Assert.AreEqual("Hello, Efra.", response);
+        }
+
+        [Test]
+        public void Test_Must_Fail()
+        {
+            controller = new HelloJenkinsController(businessLogic);
+
+            var response = controller.getHello("efra");
+            Assert.AreEqual("Hello, Efra!", response.ToString());
         }
     }
 }
